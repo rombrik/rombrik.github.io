@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rombrik Padel, l'outil de gestion de tournois de padel signé Rombrik : pistes en direct, poules, tableaux, classement, affichage TV et suivi des joueurs sur smartphone.">
+<meta name="author" content="Romain Heilig — Rombrik">
+<title>Rombrik Padel — Gestion de tournois de padel | Rombrik</title>
+<link rel="canonical" href="https://rombrik.fr/padel.html">
+<meta name="robots" content="index, follow">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rombrik.fr/padel.html">
+<meta property="og:title" content="Rombrik Padel — Gestion de tournois de padel">
+<meta property="og:description" content="Pistes en direct, poules, tableaux, classement, affichage TV et suivi des joueurs sur smartphone.">
+<meta property="og:image" content="https://rombrik-padel.com/vitrine/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bleu:#1565C0;--vert:#2E7D32;--magenta:#C2185B;--orange:#E65100;--jaune:#F9A825;--nuit:#1a1a2e;--gris:#666677;--fond:#F7F8FA;--blanc:#ffffff;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;color:var(--nuit);background:var(--blanc);}
+img{max-width:100%;height:auto;display:block;}
+nav{position:sticky;top:0;z-index:100;background:var(--nuit);display:flex;align-items:center;justify-content:space-between;padding:14px calc((100% - 1200px) / 2 + 40px);box-shadow:0 2px 20px rgba(0,0,0,0.3);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-name{font-size:18px;font-weight:700;color:white;}
+.nav-links{display:flex;gap:24px;}
+.nav-links a{font-size:12px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a.on{color:white;}
+.nav-links a.on{font-weight:600;}
+.nav-cta{background:var(--orange);color:white;font-size:12px;font-weight:600;padding:9px 20px;border-radius:6px;text-decoration:none;transition:opacity .2s;}
+.nav-cta:hover{opacity:.9;}
+@media(max-width:768px){.nav-links{display:none;}nav{padding:14px 20px;}}
+.hero{background:var(--nuit);padding:80px calc((100% - 1200px) / 2 + 40px) 90px;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding:60px 20px;}}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:5px 14px;font-size:11px;color:rgba(255,255,255,0.6);margin-bottom:22px;}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--vert);}
+.hero h1{font-size:44px;font-weight:800;color:white;line-height:1.12;margin-bottom:22px;}
+.hero h1 em{color:var(--orange);font-style:normal;}
+@media(max-width:600px){.hero h1{font-size:30px;}}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:32px;max-width:480px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{background:var(--orange);color:white;font-weight:600;font-size:13px;padding:13px 26px;border-radius:8px;text-decoration:none;transition:opacity .2s;}
+.btn-primary:hover{opacity:.9;}
+.btn-secondary{background:rgba(255,255,255,0.08);color:white;font-weight:600;font-size:13px;padding:13px 26px;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.15);}
+.shot{border-radius:12px;box-shadow:0 30px 70px -20px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.1)}
+section{padding:80px calc((100% - 1200px) / 2 + 40px);}
+@media(max-width:768px){section{padding:60px 20px;}}
+.s-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;}
+.s-title{font-size:32px;font-weight:800;line-height:1.2;margin-bottom:14px;}
+@media(max-width:600px){.s-title{font-size:24px;}}
+.s-sub{font-size:15px;color:var(--gris);line-height:1.75;max-width:600px;margin-bottom:48px;}
+.sec-fond{background:var(--fond);}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media(max-width:900px){.grid3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.grid3{grid-template-columns:1fr;}}
+.exp-card{background:white;border-radius:12px;padding:24px;border-left:4px solid var(--c);transition:transform .2s;}
+.exp-card:hover{transform:translateY(-3px);}
+.exp-icon{font-size:26px;margin-bottom:12px;}
+.exp-title{font-size:14px;font-weight:700;color:var(--nuit);margin-bottom:6px;}
+.exp-desc{font-size:12px;color:var(--gris);line-height:1.65;}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media(max-width:700px){.gal{grid-template-columns:1fr;}}
+.gal figure{margin:0}.gal figcaption{font-size:12px;color:var(--gris);margin-top:8px;text-align:center}
+.gal .shot{box-shadow:0 12px 30px -14px rgba(26,26,46,.4),0 0 0 1px rgba(26,26,46,.08);border-radius:10px}
+.dispo{background:var(--orange);padding:26px calc((100% - 1200px) / 2 + 40px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+@media(max-width:768px){.dispo{padding:26px 20px;}}
+.dispo-left{font-size:17px;font-weight:700;color:white;}
+.dispo-left small{font-size:12px;font-weight:400;opacity:.85;display:block;margin-top:3px;}
+.dispo a{background:white;color:var(--orange);font-weight:700;font-size:13px;padding:12px 24px;border-radius:8px;text-decoration:none;}
+.cta{background:var(--nuit);text-align:center;}
+.cta .s-title{color:white}
+.cta p{color:rgba(255,255,255,.55);font-size:15px;line-height:1.75;max-width:560px;margin:0 auto 28px;}
+.cta .hero-btns{justify-content:center}
+.cta-note{font-size:12px;color:rgba(255,255,255,.3);margin-top:16px;}
+footer{background:#0d0d1a;padding:26px calc((100% - 1200px) / 2 + 40px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+@media(max-width:768px){footer{padding:26px 20px;}}
+.footer-left{font-size:11px;color:rgba(255,255,255,.22);line-height:1.7;}
+.footer-left a{color:rgba(255,255,255,.35)}
+.footer-briques{display:flex;gap:4px;}
+.fb{width:8px;height:8px;border-radius:2px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">
+    <svg width="18" height="27" viewBox="0 0 56 84" aria-hidden="true">
+      <rect x="0" y="0" width="14" height="60" rx="2" fill="#1565C0"/>
+      <rect x="16" y="0" width="40" height="14" rx="2" fill="#C2185B"/>
+      <rect x="42" y="0" width="14" height="32" rx="2" fill="#C2185B"/>
+      <rect x="16" y="34" width="40" height="14" rx="2" fill="#2E7D32"/>
+      <rect x="26" y="50" width="18" height="18" rx="2" fill="#E65100"/>
+      <rect x="40" y="62" width="16" height="16" rx="2" fill="#E65100"/>
+      <rect x="0" y="64" width="14" height="14" rx="2" fill="#F9A825"/>
+    </svg>
+    <span class="nav-name">Rombrik</span>
+  </a>
+  <div class="nav-links">
+    <a href="/#expertise">Expertise</a>
+    <a href="/#services">Services</a>
+    <a href="/#tarifs">Tarifs</a>
+    <a href="/#parcours">Parcours</a>
+    <a href="/padel.html" class="on">Rombrik Padel</a>
+    <a href="/#rdv">RDV gratuit</a>
+  </div>
+  <a href="/#rdv" class="nav-cta">1h offerte →</a>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="hero-tag"><div class="hero-tag-dot"></div>Un outil signé Rombrik</div>
+    <h1>Rombrik Padel : vos tournois de padel <em>sous contrôle.</em></h1>
+    <p class="hero-sub">Pistes en direct, poules, tableaux, classement final : tout se gère depuis un seul outil, et vos joueurs suivent leur tournoi sur leur téléphone ou sur l'écran du club.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="https://rombrik-padel.com">Découvrir Rombrik Padel</a>
+      <a class="btn-secondary" href="https://rombrik-padel.com/app">Se connecter / Login</a>
+    </div>
+  </div>
+  <img class="shot" src="https://rombrik-padel.com/vitrine/pistes.webp" width="1600" height="1000" alt="Rombrik Padel : tableau de bord des pistes en direct">
+</header>
+
+<section class="sec-fond" id="fonctions">
+  <div class="s-tag" style="color:var(--bleu)">Ce que fait l'outil</div>
+  <div class="s-title">Tout pour piloter la journée</div>
+  <p class="s-sub">Conçu par un juge-arbitre pour les organisateurs de tournois : simple sur le terrain, fiable quand le planning se complique.</p>
+  <div class="grid3">
+    <div class="exp-card" style="--c:var(--bleu)"><div class="exp-icon">🎾</div><div class="exp-title">Pistes en direct</div><div class="exp-desc">Match en cours, durée, score en direct, prochains matchs à lancer et temps de repos respecté.</div></div>
+    <div class="exp-card" style="--c:var(--vert)"><div class="exp-icon">🧩</div><div class="exp-title">Poules et tableaux</div><div class="exp-desc">Classements de poules, tableaux à élimination, tours de classement et paires repêchées.</div></div>
+    <div class="exp-card" style="--c:var(--magenta)"><div class="exp-icon">🏆</div><div class="exp-title">Classement final</div><div class="exp-desc">Du vainqueur à la dernière paire, avec les points selon l'épreuve, sans recalcul à la main.</div></div>
+    <div class="exp-card" style="--c:var(--orange)"><div class="exp-icon">📺</div><div class="exp-title">Affichage TV</div><div class="exp-desc">Un mode plein écran qui fait défiler pistes, matchs, poules, tableaux et classement.</div></div>
+    <div class="exp-card" style="--c:var(--jaune)"><div class="exp-icon">📱</div><div class="exp-title">Suivi joueurs</div><div class="exp-desc">Un lien ou un QR code : chaque joueur retrouve sa piste, son horaire et son parcours sur son smartphone.</div></div>
+    <div class="exp-card" style="--c:var(--bleu)"><div class="exp-icon">🔐</div><div class="exp-title">Écrans de piste</div><div class="exp-desc">Un écran dédié par piste, accessible par QR code et protégé par une clé propre.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="s-tag" style="color:var(--orange)">En images</div>
+  <div class="s-title">Un aperçu de l'outil</div>
+  <p class="s-sub">Captures d'un tournoi de démonstration fictif.</p>
+  <div class="gal">
+    <figure><img class="shot" loading="lazy" src="https://rombrik-padel.com/vitrine/tableau.webp" width="1600" height="1000" alt="Tableau à élimination"><figcaption>Tableaux et résultats</figcaption></figure>
+    <figure><img class="shot" loading="lazy" src="https://rombrik-padel.com/vitrine/poules.webp" width="1600" height="1000" alt="Classements de poules"><figcaption>Poules et classements</figcaption></figure>
+    <figure><img class="shot" loading="lazy" src="https://rombrik-padel.com/vitrine/tv3.webp" width="1600" height="1000" alt="Affichage TV"><figcaption>Affichage TV du club</figcaption></figure>
+  </div>
+</section>
+
+<div class="dispo">
+  <div class="dispo-left">Utilisé en conditions réelles lors de tournois de club<small>Démonstration, essai, besoins spécifiques : parlons de votre prochain événement. Tarifs sur demande.</small></div>
+  <a href="mailto:contact@rombrik.fr?subject=Rombrik%20Padel%20%E2%80%93%20Demande%20de%20d%C3%A9monstration">Demander une démonstration</a>
+</div>
+
+<section class="cta">
+  <div class="s-title">Un tournoi à organiser ?</div>
+  <p>Découvrez l'outil en ligne ou contactez-moi pour une démonstration.</p>
+  <div class="hero-btns">
+    <a class="btn-primary" href="https://rombrik-padel.com">Aller sur rombrik-padel.com</a>
+    <a class="btn-secondary" href="https://rombrik-padel.com/app">Se connecter / Login</a>
+  </div>
+  <div class="cta-note">contact@rombrik.fr · <a href="https://rombrik-padel.com/legal" style="color:rgba(255,255,255,.45);text-decoration:none">Mentions légales Rombrik Padel</a></div>
+</section>
+
+<footer>
+  <div class="footer-left">
+    © 2026 Rombrik — Romain Heilig · Entrepreneur individuel · SIRET 827 730 789 00027<br>
+    TVA non applicable, art. 293B du CGI · RC Pro Hiscox · 5 Allée de Grumard, 42600 Montbrison
+  </div>
+  <div class="footer-briques">
+    <div class="fb" style="background:#1565C0;"></div>
+    <div class="fb" style="background:#2E7D32;"></div>
+    <div class="fb" style="background:#C2185B;"></div>
+    <div class="fb" style="background:#E65100;"></div>
+    <div class="fb" style="background:#F9A825;"></div>
+  </div>
+</footer>
+</body>
+</html>
